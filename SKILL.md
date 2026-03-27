@@ -12,7 +12,7 @@ description: >
 
 默认数据库文件：
 
-`~/.openclaw/workspace/skills/reading-list/reading-list.db`
+`reading-list.db`（位于 skill 根目录；脚本默认按自身所在位置自动解析）
 
 ## Core workflow
 
@@ -52,9 +52,9 @@ description: >
 常用命令：
 
 ```bash
-python3 ~/.openclaw/workspace/skills/reading-list/scripts/reading_list_db.py list --status unread --sort weighted --limit 20
-python3 ~/.openclaw/workspace/skills/reading-list/scripts/reading_list_db.py list --status unread --sort recommended --limit 20
-python3 ~/.openclaw/workspace/skills/reading-list/scripts/reading_list_db.py list --status all --query AI --sort weighted --limit 20
+python3 scripts/reading_list_db.py list --status unread --sort weighted --limit 20
+python3 scripts/reading_list_db.py list --status unread --sort recommended --limit 20
+python3 scripts/reading_list_db.py list --status all --query AI --sort weighted --limit 20
 ```
 
 向用户展示时，优先给出：
@@ -73,8 +73,8 @@ python3 ~/.openclaw/workspace/skills/reading-list/scripts/reading_list_db.py lis
 当用户说“这篇读完了”“把第 3 条标成已读”“恢复未读”时：
 
 ```bash
-python3 ~/.openclaw/workspace/skills/reading-list/scripts/reading_list_db.py mark-read --id 3
-python3 ~/.openclaw/workspace/skills/reading-list/scripts/reading_list_db.py mark-unread --url 'https://example.com/post'
+python3 scripts/reading_list_db.py mark-read --id 3
+python3 scripts/reading_list_db.py mark-unread --url 'https://example.com/post'
 ```
 
 优先使用 `id`，因为同一域名长 URL 更容易出错。
@@ -84,7 +84,7 @@ python3 ~/.openclaw/workspace/skills/reading-list/scripts/reading_list_db.py mar
 当用户想看待读数量、总数、最近保存文章时：
 
 ```bash
-python3 ~/.openclaw/workspace/skills/reading-list/scripts/reading_list_db.py stats
+python3 scripts/reading_list_db.py stats
 ```
 
 ## Chat workflow
@@ -163,8 +163,8 @@ SQLite 管理脚本，零额外依赖，支持：
 示例：
 
 ```bash
-python3 ~/.openclaw/workspace/skills/reading-list/scripts/reading_list_db.py add 'https://example.com' '示例标题' '这是一段简短摘要。' --recommendation 8
-python3 ~/.openclaw/workspace/skills/reading-list/scripts/reading_list_db.py list --status unread --sort weighted
+python3 scripts/reading_list_db.py add 'https://example.com' '示例标题' '这是一段简短摘要。' --recommendation 8
+python3 scripts/reading_list_db.py list --status unread --sort weighted
 ```
 
 ## References

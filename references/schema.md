@@ -4,7 +4,7 @@
 
 Default database path:
 
-`~/.openclaw/workspace/skills/reading-list/reading-list.db`
+`reading-list.db` (located at the skill root; resolved relative to the script location by default)
 
 ## Table: `articles`
 
