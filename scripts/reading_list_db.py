@@ -7,7 +7,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 from typing import List, Dict, Any
 
-DEFAULT_DB = Path(__file__).resolve().parent.parent / "reading-list.db"
+DEFAULT_DB = Path(__file__).resolve().parent.parent.parent / "db" / "reading-list.db"
 
 BASE_SCHEMA = """
 CREATE TABLE IF NOT EXISTS articles (

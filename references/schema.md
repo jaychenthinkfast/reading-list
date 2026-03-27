@@ -4,7 +4,7 @@
 
 Default database path:
 
-`reading-list.db` (located at the skill root; resolved relative to the script location by default)
+`../db/reading-list.db` (relative to the skill root; resolved from the script location into the sibling `db/` directory by default)
 
 ## Table: `articles`
 

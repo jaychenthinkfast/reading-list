@@ -12,7 +12,7 @@ description: >
 
 默认数据库文件：
 
-`reading-list.db`（位于 skill 根目录；脚本默认按自身所在位置自动解析）
+`../db/reading-list.db`（相对于 skill 根目录；脚本按自身位置解析到 skill 同级 `db/` 目录，便于分发与更新时保留数据）
 
 ## Core workflow
 
