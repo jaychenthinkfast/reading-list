@@ -1,0 +1,6 @@
+reading-list.db
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
